@@ -1,4 +1,4 @@
-import React, { type ComponentPropsWithRef } from 'react';
+import React, { useEffect, type ComponentPropsWithRef } from 'react';
 import { type VariantProps } from 'class-variance-authority';
 import { clsxMerge } from '../../common/utils/classNameUtils';
 import { buttonStyles } from './helpers';
@@ -24,6 +24,8 @@ export default function Button({
   leftIcon,
   ...props
 }: ButtonProps) {
+  useEffect(() => console.log('Button'));
+  
   return (
     <button
       className={clsxMerge(
